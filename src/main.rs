@@ -23,7 +23,7 @@ trait Vehicle {
 }
 
 impl Vehicle for GasolineCar {
-    type EngineType = ?; // Fix this line
+    type EngineType = CarEngine; // Fix this line
     fn get_engine(&self) -> Self::EngineType {
         CarEngine {
             model: "V8".to_string(),
@@ -33,7 +33,7 @@ impl Vehicle for GasolineCar {
 }
 
 impl Vehicle for ElectricCar {
-    type EngineType = ?; // Fix this line
+    type EngineType = ElectricEngine; // Fix this line
     fn get_engine(&self) -> Self::EngineType {
         ElectricEngine {
             model: "Electric Motor".to_string(),
