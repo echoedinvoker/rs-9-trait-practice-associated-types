@@ -11,7 +11,7 @@ struct VecContainer_i32 {
 }
 
 impl Container for VecContainer_i32 {
-    type Item = ?; // This line needs a fix
+    type Item = i32; // This line needs a fix
 
     fn add_item(&mut self, item: Self::Item) {
         self.items.push(item);
@@ -27,7 +27,7 @@ struct OptionContainer<T> {
 }
 
 impl<T> Container for OptionContainer<T> {
-    type Item = ?; // This line needs a fix
+    type Item = T; // This line needs a fix
 
     fn add_item(&mut self, item: T) {
         self.item = Some(item);
@@ -58,4 +58,3 @@ fn main() {
         println!("OptionContainer is empty");
     }
 }
-
